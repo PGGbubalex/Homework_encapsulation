@@ -33,20 +33,25 @@ public class Main {
         // Задание 3
         System.out.println("//////////////////////////////////");
         Car Lada = new Car("", "Granta", 1.7, "", 2015, "России", "", 3, "а123xн545", "Зимняя");
-        Lada.changeRubberType(Lada);
-        Car.Insurance ladaIns = Lada.new Insurance(2021, 140000,"140000");
         System.out.println(Lada);
         Car Audi = new Car("Audi", "A8 50 L TDI quattro", 3.0, " ", 2020, "Германии", "", 2, "x000xx000", "Летняя");
-        Car.Insurance audiIns = Audi.new Insurance(2023, 140000, "140000");
         System.out.println(Audi);
         Car BMW = new Car("BMW", "Z8", -1, " черного", 2021, "", "", 4, "", "Зимняя");
-        Car.Insurance bmwIns = BMW.new Insurance(2024, 140000, "123456789");
-        BMW.setInsurance(bmwIns);
-        BMW.checkNumbInsurance();
         System.out.println(BMW);
         Car Kia = new Car("Kia", "Sportage 4-го поколения", 2.4, " красного", 2018, "Южной Корее", "", 5, "", "Летняя");
         System.out.println(Kia);
         Car Hyundai = new Car("Hyundai", "", 1.6, "оранжевого", 2016, "Южной Корее", "", -4, "", "");
         System.out.println(Hyundai);
+
+        Lada.changeRubberType(Lada);
+        Car.Insurance ladaIns = Lada.new Insurance(2021, 140000,"140000");
+        Car.Insurance audiIns = Audi.new Insurance(2023, 140000, "140000");
+        Car.Insurance bmwIns = BMW.new Insurance(2024, 140000, "123456789");
+        Lada.setInsurance(ladaIns);
+        Audi.setInsurance(audiIns);
+        BMW.setInsurance(bmwIns);
+        Lada.checkNumbInsurance();
+        Audi.checkNumbInsurance();
+        BMW.checkNumbInsurance();
     }
 }
